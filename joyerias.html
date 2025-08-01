@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anillos - Compra en una tienda segura</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/cart.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Compra en una tienda segura</div>
+    <nav class="navbar">
+      <a href="index.html">Inicio</a>
+      <a href="joyerias.html">Joyeria</a>
+      <a href="tecnologia.html">Tecnología</a> 
+      <a href="varios.html">Variado</a>
+      <a href="cart.html">Carrito</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="productos">
+    <img src="https://www.orosolido14k.com/wp-content/uploads/2023/04/Venta-de-joyas-de-oro-min.jpg" alt="Banner Joyería" class="banner-principal">
+    <div class="producto-grid">
+      <div class="producto">
+        <img src="imagenes/anillos de pareja.webp" alt="Anillo 1" />
+        <h3>Anillo Sol Y Luna 2 En 1</h3>
+        <p class="descripcion">El Anillo Sol y Luna es una joya que simboliza la armonía entre dos fuerzas poderosas y complementarias. MEDIDA: 2CM</p>
+        <p>S/. 69.00</p>
+        <button onclick="agregarAlCarrito('Anillo Sol Y Luna 2 En 1', 69)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/dragon.png" alt="Anillo Dragon De La Suerte" />
+        <h3>Anillo Dragon De La Suerte</h3>
+        <p class="descripcion">Atrae lo mejor para ti con el Anillo Dragón, Eleva Tu Estilo y Espíritu , Acero inoxidable 36L. 8CM</p>
+        <p>S/. 70.00</p>
+        <button onclick="agregarAlCarrito('Anillo Dragon De La Suerte', 70)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/buho.jpg" alt="Anillo Buho" />
+        <h3>Anillo Buho</h3>
+        <p class="descripcion">Anillo liso que es lo suficientemente cómodo como para llevar a diario. Pulido brillante. Ajustable.</p>
+        <p>S/. 70.00</p>
+        <button onclick="agregarAlCarrito('Anillo Buho', 70)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/girazol.png" alt="Anillo Girasol" />
+        <h3>Anillo Girasol</h3>
+        <p class="descripcion">Un Símbolo de Amor y Alegría, Un Toque de Luz en Tu Romance.</p>
+        <p>S/. 65.00</p>
+        <button onclick="agregarAlCarrito('Anillo Girasol', 65)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/luna.png" alt="Aretes Luna" />
+        <h3>Aretes Luna</h3>
+        <p class="descripcion">Aretes clásicos y elegantes.</p>
+        <p>S/. 54.00</p>
+        <button onclick="agregarAlCarrito('Aretes Luna', 54)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/flor.png" alt="Arete Flor Giratoria" />
+        <h3>Arete Flor Giratoria</h3>
+        <p class="descripcion">¡Añade un toque de magia y movimiento a tu estilo con los Aretes Flor Giratorio y transforma cualquier ocasión en algo especial!</p>
+        <p>S/. 50.00</p>
+        <button onclick="agregarAlCarrito('Arete Flor Giratoria', 50)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/iluminati.jpeg" alt="Cadena Iluminati" />
+        <h3>Cadena Iluminati</h3>
+        <p class="descripcion">Descubre el poder y el simbolismo detrás de la mítica sociedad secreta con nuestra cadena exclusiva</p>
+        <p>S/. 69.00</p>
+        <button onclick="agregarAlCarrito('Cadena Iluminati', 69)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/ra y anuvis.png" alt="Cadena Ra Y Anubis" />
+        <h3>Cadena Ra Y Anubis</h3>
+        <p class="descripcion">Descubre el Poder de los Dioses Egipcios con Nuestra Cadena Ra y Anubis.</p>
+        <p>S/. 65.00</p>
+        <button onclick="agregarAlCarrito('Cadena Ra Y Anubis', 65)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/collarluna.png" alt="Collar Luna" />
+        <h3>Collar Luna</h3>
+        <p class="descripcion">Siempre estará contigo la luna, elegante.</p>
+        <p>S/. 60.00</p>
+        <button onclick="agregarAlCarrito('Collar Luna', 60)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/collar flot.png" alt="Collar Flor Giratoria" />
+        <h3>Collar Flor Giratoria</h3>
+        <p class="descripcion">Collar Flor Giratoria para regalarle a tu Novia.</p>
+        <p>S/. 60.00</p>
+        <button onclick="agregarAlCarrito('Collar Flor Giratoria', 60)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/corazon pareja.png" alt="Cadena Corazon Para Parejas" />
+        <h3>Cadena Corazon Para Parejas</h3>
+        <p class="descripcion">¡Unidos en Amor, Formamos un Corazón! Celebra el vínculo inquebrantable del amor con nuestra cadena especial para parejas.</p>
+        <p>S/. 70.00</p>
+        <button onclick="agregarAlCarrito('Cadena Corazon Para Parejas', 70)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/collara de flor.png" alt="Collar Girasol" />
+        <h3>Collar Girasol</h3>
+        <p class="descripcion">Collar Flor Giratoria para regalarle a tu Novia.</p>
+        <p>S/. 70.00</p>
+        <button onclick="agregarAlCarrito('Collar Girasol', 70)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/trebol de corazon.jpeg" alt="Collar Trebol De Corazones" />
+        <h3>Collar Trebol De Corazones</h3>
+        <p class="descripcion">Imagina un collar encantador y elegante que lleva la forma icónica de un trébol de cuatro hojas.</p>
+        <p>S/. 70.00</p>
+        <button onclick="agregarAlCarrito('Collar Trebol De Corazones', 70)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/collar pareja 100.jpeg" alt="Collar Sol Y Luna Con 100 Idiomas" />
+        <h3>Collar Sol Y Luna Con 100 Idiomas</h3>
+        <p class="descripcion">El detalle perfecto para decir ‘Te Amo’ en 100 idiomas</p>
+        <p>S/. 80.00</p>
+        <button onclick="agregarAlCarrito('Collar Sol Y Luna Con 100 Idiomas', 80)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/collar u.png" alt="Collar Camiseta U" />
+        <h3>Collar Camiseta U</h3>
+        <p class="descripcion">Vienen 2 collares, Material: acero inoxidable</p>
+        <p>S/. 65.00</p>
+        <button onclick="agregarAlCarrito('Collar Camiseta U', 65)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/collar al.png" alt="Collar Camiseta Al" />
+        <h3>Collar Camiseta Al</h3>
+        <p class="descripcion">El detalle perfecto para decir ‘Te Amo’ en 100 idiomas</p>
+        <p>S/. 65.00</p>
+        <button onclick="agregarAlCarrito('Collar Camiseta Al', 65)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/collar de girazol 2.jpeg" alt="Collar Eres Mi Sol" />
+        <h3>Collar Eres Mi Sol</h3>
+        <p class="descripcion">Captura la luz del sol y el amor eterno con nuestro collar 'You Are My Sunshine'.</p>
+        <p>S/. 65.00</p>
+        <button onclick="agregarAlCarrito('Collar Eres Mi Solera', 65)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/san miguel.png" alt="Cadena De Proteccion San Miguel" />
+        <h3>Cadena De Proteccion San Miguel</h3>
+        <p class="descripcion">La Cadena de Protección San Miguel es más que un accesorio: es un símbolo de fe, protección divina y conexión espiritual.</p>
+        <p>S/. 55.00</p>
+        <button onclick="agregarAlCarrito('Cadena De Proteccion San Miguel', 55)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/collara de espada con chocolate.jpeg" alt="Collar Corazon Y Espada" />
+        <h3>Collar Corazon Y Espada</h3>
+        <p class="descripcion">Set de Collar y espada, joya de acero, incluye caja de joyería, collar corazón, collar espada, tarjeta y chocolate.</p>
+        <p>S/. 69.00</p>
+        <button onclick="agregarAlCarrito('Collar Corazon Y Espada', 69)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/collara de tulipan.jpeg" alt="Collar Tulipan" />
+        <h3>Collar Tulipan</h3>
+        <p class="descripcion">Collar Tulipan, joya de acero, incluye caja de joyería, collar tulipán, tarjeta y chocolate.</p>
+        <p>S/. 55.00</p>
+        <button onclick="agregarAlCarrito('Collar Tulipan', 55)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/llave y anillo.jpeg" alt="Pack Collar Giratorio Llave Y Anillo" />
+        <h3>Pack Collar Giratorio Llave Y Anillo</h3>
+        <p class="descripcion">Diseño elegante y detallado: forma de llave, símbolo de alegría, éxito y energía positiva. Incrustaciones de piedras brillantes.</p>
+        <p>S/. 79.00</p>
+        <button onclick="agregarAlCarrito('Pack Collar Giratorio Llave Y Anillo', 79)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/pulsera lobo.png" alt="Pulsera Lobo" />
+        <h3>Pulsera Lobo</h3>
+        <p class="descripcion">Pulsera Lobo – Fuerza y Libertad en tu muñeca. Protección, poder y estilo en una sola pulsera.</p>
+        <p>S/. 80.00</p>
+        <button onclick="agregarAlCarrito('Pulsera Lobo', 80)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/1828/1707634453Screenshot%202024-02-11%20at%2001.53.28.png" alt="Brazalete De La Riqueza" />
+        <h3>Pulsera Luna</h3>
+        <p class="descripcion">Diseño elegante y detallado: forma de luna, símbolo de intuición y creatividad. Incrustaciones de piedras brillantes.</p>
+        <p>S/. 70.00</p>
+        <button onclick="agregarAlCarrito('Pulsera Luna', 70)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3360/1713924627JP004.jpeg" alt="Pulseras Bff" />
+        <h3>Pulseras Bff</h3>
+        <p class="descripcion">Vienen 2 pulseras BFF, un accesorio para ponerte con tu amiga(o).</p>
+        <p>S/. 35.00</p>
+        <button onclick="agregarAlCarrito('Pulseras Bff', 35)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3466/1715268860Screenshot%202024-05-09%20at%2010.33.56.png" alt="Brazalete Dragon De La Suerte" />
+        <h3>Brazalete Dragon De La Suerte</h3>
+        <p class="descripcion">Hecho de acero inoxidable. Perfecto para uso diario. Símbolo de Suerte y Protección.</p>
+        <p>S/. 90.00</p>
+        <button onclick="agregarAlCarrito('Brazalete Dragon De La Suerte', 90)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/17 y 15 cm pulcera.png" alt="Pulsera Palo Santo Aromatica" />
+        <h3>Pulsera Palo Santo Aromatica</h3>
+        <p class="descripcion">Cada brazalete está diseñado de forma única utilizando cuentas de la madera de Palo Santo, aportando un efecto relajante y para aliviar el estrés.</p>
+        <p>S/. 70.00</p>
+        <button onclick="agregarAlCarrito('Pulsera Palo Santo Aromatica', 70)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3813/1720742899Screenshot%202024-07-11%20at%2019.04.51.png" alt="Pulsera Feng Shui X1" />
+        <h3>Pulsera Feng Shui X1</h3>
+        <p class="descripcion">¡Atrae Riqueza y Prosperidad! Lleva la armonía allá donde vayas con nuestra pulsera Feng Shui.</p>
+        <p>S/. 70.00</p>
+        <button onclick="agregarAlCarrito('Pulsera Feng Shui X1', 70)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+      <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/1855/1707628816Screenshot%202024-02-11%20at%2000.20.05.png" alt="Aretes Zafiro" />
+      <h3>Aretes Zafiro</h3>
+      <p class="descripcion">¡Atrae Riqueza y Prosperidad! Lleva la armonía allá donde vayas con nuestros Aretes Zafiro.</p>
+      <p>S/. 80.00</p>
+      <button onclick="agregarAlCarrito('Aretes Zafiro', 80)">Agregar al carrito</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Compra en una tienda segura y en Linea. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

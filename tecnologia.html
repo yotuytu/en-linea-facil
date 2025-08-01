@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tecnología - Compra en una tienda segura</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/cart.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Compra en una tienda segura</div>
+    <nav class="navbar">
+      <a href="index.html">Inicio</a>
+      <a href="joyerias.html">Joyeria</a>
+      <a href="tecnologia.html">Tecnología</a>
+      <a href="varios.html">Variado</a>
+      <a href="cart.html">Carrito</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="productos">
+    <img src="https://i.pinimg.com/736x/a2/93/65/a29365b1eb77843b32359a0ca5149d07.jpg" alt="Banner Tecnología" class="banner-principal">
+    <div class="producto-grid">
+      <div class="producto">
+        <img src="imagenes/F9.jpg" alt="Audifono Bluetooth F9" />
+        <h3>Audifono Bluetooth F9</h3>
+        <p class="descripcion">Audífono inalámbricos con excelente calidad de sonido y batería de larga duración. Power bank de 2500 mah. Incluye dos audífonos táctiles, dos pares de almohadillas de repuesto, cable USB y manual.</p>
+        <p>S/. 60.00</p>
+        <button onclick="agregarAlCarrito('Audifono Bluetooth F9', 60)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/X8 max.jpeg" alt="Smart Watch X8 Max" />
+        <h3>Smart Watch X8 Max</h3>
+        <p class="descripcion">Smart Watch con Bluetooth, recibe notificaciones, mide pasos, calorías, presión arterial, ritmo cardiaco y oxígeno en la sangre.</p>
+        <p>S/. 110.00</p>
+        <button onclick="agregarAlCarrito('Smart Watch X8 Max', 110)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/6607/1745078174VENTILADOR-DE-CUELLO.jpg" alt="Ventilador De Cuello Portatil" />
+        <h3>Ventilador De Cuello Portatil</h3>
+        <p class="descripcion">Ventilador personal portátil, colócalo alrededor de tu cuello y disfruta de un agradable flujo de aire. Batería de litio 1200mA, 3 velocidades, duración de 3/5 horas.</p>
+        <p>S/. 80.00</p>
+        <button onclick="agregarAlCarrito('Ventilador De Cuello Portatil', 80)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/2177/1710021143Lampara%20mata%20mosco%201.webp" alt="Lampara Premium Mata Mosquitos" />
+        <h3>Lampara Premium Mata Mosquitos</h3>
+        <p class="descripcion">Material plástico, alimentación USB, incluye cable, luces LED, resistente al agua. Medidas: 19x12x12 cm.</p>
+        <p>S/. 70.00</p>
+        <button onclick="agregarAlCarrito('Lampara Premium Mata Mosquitos', 70)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3615/1717272829dropip105.jpg" alt="Audifonos Inalambricos Estilo Aretes" />
+        <h3>Audifonos Inalambricos Estilo Aretes</h3>
+        <p class="descripcion">Audífonos inalámbricos con diseño tipo aretes, batería portátil de alta capacidad.</p>
+        <p>S/. 85.00</p>
+        <button onclick="agregarAlCarrito('Audifonos Inalambricos Estilo Aretes', 85)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3904/17219334235.jpeg" alt="Smartwatch Ts900 O Ds9 Plus" />
+        <h3>Smartwatch Ts900 O Ds9 Plus</h3>
+        <p class="descripcion">Smartwatch con múltiples funciones, incluyendo monitoreo de salud y notificaciones.</p>
+        <p>S/. 50.00</p>
+        <button onclick="agregarAlCarrito('Smartwatch Ts900 O Ds9 Plus', 50)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3910/17219397131.jpeg" alt="Smartwatch I9 Pro Max" />
+        <h3>Smartwatch I9 Pro Max</h3>
+        <p class="descripcion">Smart Watch, Responder para hacer y recibir Llamadas caja de 49mm conexion Bluetooth. Cronómetro, ordenador, registro de llamadas (responder/hacer llamadas, mensaje de notificación, música Bluetooth, modo de suspensión, conteo de pasos, fotografía remota, reloj despertador, configuración de Dial.</p>
+        <p>S/. 60.00</p>
+        <button onclick="agregarAlCarrito('Smartwatch I9 Pro Max', 60)">Agregar al carrito</button>
+      </div>
+       <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3907/17219356764.JPG" alt="Parlante Charge 2 Replica" />
+        <h3>Parlante Charge 2 Replica</h3>
+        <p class="descripcion">Parlante portátil con conexión Bluetooth y batería de larga duración. Se despachan en colores variados según la disponibilidad. </p>
+        <p>S/. 60.00</p>
+        <button onclick="agregarAlCarrito('Parlante Charge 2 Replica', 60)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/4153/1724703171Screenshot%202024-08-26%20at%2015.07.59.png" alt="Lentes Con Audifonos Bluetooth" />
+        <h3>Lentes Con Audifonos Bluetooth</h3>
+        <p class="descripcion">Protege tus ojos y disfruta de tus canciones favoritas al mismo tiempo. ¡Lentes de sol con audio Bluetooth para un look moderno y funcional!.</p>
+        <p>S/. 70.00</p>
+        <button onclick="agregarAlCarrito('Lentes Con Audifonos Bluetooth', 70)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/4335/1727384686714yW6cEdOL._AC_SX679_.jpg" alt="Anbernic Rg35xxsp 128gb 10000 Juego" />
+        <h3>Anbernic Rg35xxsp 128gb 10000 Juegos</h3>
+        <p class="descripcion">Consola de juegos portátil Anbernic RG35XXSP: consola de juegos portátil RG35XX Flip 2024, tarjeta SD de 128GB 10,000 juegos clásicos, soporta más de 10 formatos de juego. Linux System puede agregar emuladores y juegos con formato relacionado. Colores: negro, azul, gris, plata</p>
+        <p>S/. 370.00</p>
+        <button onclick="agregarAlCarrito('Anbernic Rg35xxsp 128gb 10000 Juegos', 370)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/4830/17334228796.jpg" alt="Trimui Smart Pro 128gb" />
+        <h3>Trimui Smart Pro 128gb</h3>
+        <p class="descripcion">Smartwatch con múltiples funciones, incluyendo monitoreo de salud y notificaciones.Almacenamiento: 128 GB , 🎮 Juegos incluidos: 10,000 juegos, 📱 Pantalla: 5.0 pulgadas, resolución 1280x720 píxeles, 🪫Bateria: 5,000 mah - 6 a 8 horas de Juego</p>
+        <p>S/. 420.00</p>
+        <button onclick="agregarAlCarrito('Trimui Smart Pro 128gb', 420)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/4911/1734278645DRONE88.webp" alt="Drone Con Camara 4k E88pro" />
+        <h3>Drone Con Camara 4k E88pro</h3>
+        <p class="descripcion">Captura imágenes y videos impresionantes con el Drone E88 Pro. Equipado con una cámara 4K, este drone es perfecto para fotógrafos y entusiastas de la tecnología. Con un tiempo de vuelo de hasta 30 minutos y un alcance de 100 metros, podrás explorar y grabar desde nuevas alturas.</p>
+        <p>S/. 160.00</p>
+        <button onclick="agregarAlCarrito('Drone Con Camara 4k E88pro', 160)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/4917/1734376501ASTRONAUTA.JPG" alt="Astronauta Robot Volador Blanco" />
+        <h3>Astronauta Robot Volador Blanco</h3>
+        <p class="descripcion">🚀🧑‍🚀 Hasta las estrellas 🚀🧑‍🚀 ,ASTRONAUTA VOLADOR SENSOR SPACEMAN* 👩‍🚀⭐🔭 🚀 , Diseño ergonómico y hermoso astronauta volador con sensor perfecto para regalo a los engreídos (Mayores de 3 años)</p>
+        <p>S/. 70.00</p>
+        <button onclick="agregarAlCarrito('Astronauta Robot Volador Blanco', 70)">Agregar al carrito</button>
+      </div>
+       <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/6508/1744041930X_10693.jpg" alt="Audifonos Inalambricos Modelo Arete" />
+        <h3>Audifonos Inalambricos Modelo Arete</h3>
+        <p class="descripcion">vive la combinación perfecta de comodidad, estilo y rendimiento con los audífonos inalámbricos Arete. ¡perfectos para cualquier ocasión y cualquier aventura!</p>
+        <p>S/. 85.00</p>
+        <button onclick="agregarAlCarrito('Audifonos Inalambricos Modelo Arete', 85)">Agregar al carrito</button>
+      </div>
+       <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/4337/172738590961LHlBWu0eL._SX466_.jpg" alt="Powkiddy V10 128gb 10000 Juegos" />
+        <h3>Powkiddy V10 128gb 10000 Juegos</h3>
+        <p class="descripcion"> Pantalla GBA perfecta operación de fotograma completo de doble punto a punto, Diseño ergonómico de gatillo LR, CPU de cuatro núcleos de alto rendimiento, funcionamiento perfecto de FPS 60HZ ,cualquier actualización, compatible con los principales simuladores 3D de 64 bits , sonido fuerte , colores: negro, morado, gris, beige</p>
+        <p>S/. 280.00</p>
+        <button onclick="agregarAlCarrito('Powkiddy V10 128gb 10000 Juegos', 280)">Agregar al carrito</button>
+      </div>
+       <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/6860/1747543010WhatsApp%20Image%202025-05-16%20at%2011.07.17%20AM.jpeg" alt="Secador De Ropa Portatil" />
+        <h3>Secador De Ropa Portatil</h3>
+        <p class="descripcion">¡Seca tu ropa en solo 20 minutos con nuestro secador! 🚀, Gracias a su gran potencia es capaz de secar tus prendas en breves períodos y así puedas tener tu ropa lista cada que lo necesites😃 , ¡Cuelga hasta 12 prendas y sécalas al mismo tiempo! 💯😲 . Con envío y pago contra entrega, ¡es el momento perfecto para comprar! 📦</p>
+        <p>S/. 180.00</p>
+        <button onclick="agregarAlCarrito('Secador De Ropa Portatil', 180)">Agregar al carrito</button>
+      </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Compra en una tienda segura. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

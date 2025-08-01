@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finalizar Pedido | Compra en una tienda segura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f2f2f2;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      color: #444;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    input:focus, select:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 30px;
+      background: #28a745;
+      color: white;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #218838;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🛒 Finaliza tu pedido</h2>
+    <form action="https://formspree.io/f/xyzwgejy" method="POST">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="Nombre" required>
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="Teléfono" required>
+
+      <label for="departamento">Departamento</label>
+      <select id="departamento" name="Departamento" required>
+        <option value="">Selecciona un departamento</option>
+        <option value="Amazonas">Amazonas</option>
+        <option value="Ancash">Ancash</option>
+        <option value="Apurímac">Apurímac</option>
+        <option value="Arequipa">Arequipa</option>
+        <option value="Ayacucho">Ayacucho</option>
+        <option value="Cajamarca">Cajamarca</option>
+        <option value="Callao">Callao</option>
+        <option value="Cusco">Cusco</option>
+        <option value="Huancavelica">Huancavelica</option>
+        <option value="Huánuco">Huánuco</option>
+        <option value="Ica">Ica</option>
+        <option value="Junín">Junín</option>
+        <option value="La libertad">La libertad</option>
+        <option value="Lambayeque">Lambayeque</option>
+        <option value="Lima">Lima</option>
+        <option value="Loreto">Loreto</option>
+        <option value="Madre de Dios">Madre de Dios</option>
+        <option value="Moquegua">Moquegua</option>
+        <option value="Pasco">Pasco</option>
+        <option value="Piura">Piura</option>
+        <option value="Puno">Puno</option>
+        <option value="San Martín">San Martín</option>
+        <option value="Tacna">Tacna</option>
+        <option value="Tumbes">Tumbes</option>
+        <option value="Ucayali">Ucayali</option>
+      </select>
+
+      <label for="distrito">Distrito</label>
+      <select id="distrito" name="Distrito" required>
+        <option value="">Selecciona un distrito</option>
+      </select>
+
+      <label for="direccion">Dirección exacta</label>
+      <input type="text" id="direccion" name="Dirección" required>
+
+      <label for="referencia">Referencia (opcional)</label>
+      <input type="text" id="referencia" name="Referencia">
+
+      <!-- Redirección después del envío -->
+      <input type="hidden" name="_redirect" value="gracias.html">
+
+      <button type="submit">Confirmar pedido (Pago contra entrega)</button>
+    </form>
+  </div>
+
+  <script>
+    const distritosPorDepartamento = {
+      Amazonas: ["Rodríguez de Mendoza", "SAN FRANCISCO DE YESO", "SAN CARLOS", "ARAMANGO", "FLORIDA", "LA PECA", "BAGUA", "CHACHAPOYAS", 
+      "BAGUA GRANDE", "ASUNCION", "BAGUA", "BALSAS", "CAJARURO", "CAMPORREDONDO", "CHETO", "CHILIQUIN", "CHIRIMOTO", "CHISQUILLA", "CHUQUIBAMBA",
+     "CHURUJA", "COCABAMBA", "COCHAMAL", "COLCAMAR", "CONILA", "COPALLIN", "COROSHA", "CUISPES", "CUMBA", "EL CENEPA", "SAN JERONIMO", "EL MILAGRO",
+     "EL PARCO", "GRANADA", "HUAMBO", "HUANCAS", "IMAZA", "INGUILPATA", "JAMALCA", "JAZAN", "JUMBILLA", "LA JALCA", "LA PECA", "LAMUD", "LEIMEBAMBA",
+     "LEVANTO", "LIMABAMBA", "LONGAR", "LONGUITA", "LONYA CHICO", "LONYA GRANDE", "LUYA", "LUYA VIEJO", "MAGDALENA", "MARIA", "MARISCAL BENAVIDES", 
+     "MARISCAL CASTILLA", "MILPUC", "MOLINOPAMPA", "MONTEVIDEO", "NIEVA", "OCALLI", "OCUMAL", "OLLEROS", "OMIA", "PISUQUIA", "PROVIDENCIA", "QUINJALCA", 
+     "RECTA", "RIO SANTIAGO", "SAN CRISTOBAL", "SAN FRANCISCO DE DAGUAS", "SAN FRANCISCO DEL YESO", "SAN ISIDRO DE MAINO", "SAN JUAN DE LOPECANCHA", 
+     "SAN NICOLAS", "SANTA CATALINA", "SANTA ROSA", "SANTO TOMAS", "SHIPASBAMBA", "SOLOCO", "SONCHE", "TINGO", "TOTORA", "TRITA", "VALERA", "VISTA ALEGRE", "YAMBRASBAMBA", "YAMON" ],
+      Ancash : ["PAMPAS GRANDE", "HUARAZ", "CORIS", "CULEBRAS", "HUACLLAN", "HUALLANCA", "PIRA", "PUEBLO LIBRE", "SAN JUAN DE RONTOY", "SAN MIGUEL DE ACO",
+      "SAN NICOLAS", "SHILLA", "SUCCHA", "TICLLOS", "TINCO", "YAUTAN", "YAUYA", "YUNGAR", "HUANTAR", "SAN PEDRO DE CHANA", "GONZALES PRADA", "HUALLANCA", "ACO",
+      "PAROBAMBA", "PAUCAS", "PISCOBAMBA", "POMABAMBA", "PONTO", "QUINUABAMBA", "RAHUAPAMPA", "RAPAYAN", "ALFONSO UGARTE", "QUICHES", "QUILLO", "RAGASH", "RANRAHIRCA",
+      "HIUSTON", "15 DE JUNIO", "10 DE SEPTIEMBRE", "12 DE OCTUBRE", "14 DE FEBRERO", "15 DE ABRIL", "16 DE DICIEMBRE", "19 DE MARZO", "1RO DE AGOSTO", "1RO DE MAYO",
+      "2 DE JUNIO", "2 DE MAYO", "CARLOS GARCIA RONCERO A.H", "21 DE ABRIL", "27 DE OCTUBRE", "3 DE OCTUBRE", "3 ESTRELLAS", "7 DE JULIO", "ALBERTO ROMERO LEGUIA",
+      "ALEJANDRO TOLEDO A.H", "ALTO PERU", "ANTUNEZ DE MAYOLO", "BANCHERO ROSI", "BARRIO FISCAL 5", "BELEN", "BELLAMAR", "BELLAVISTA", "BELLO SUR A.H", "BOLIVAR BAJO",
+      "BOLIVAR ALTO", "BRUCES", "BUENOS AIRES", "CACERES ARAMAYO", "CALIFORNIA", "CASCO URBANO", "CASUARINAS", "CESAR VALLEJO", "CONDOMINIO GALILEA", "CONDOMINIO LOS PINOS",
+      "CORAZON DE JESUS", "EL DORADO", "GOLFO PERSICO", "INDEPENDENCIA", "LUIS FELIPE DE LAS CASAS", "MAGDALENA NUEVA", "MANUEL AREVALO", "SAN LUIS", "SAN PEDRO", "SANTA CRUZ",
+      "VILLA EL PERIODISTA", "VILLA EL SOL", "VILLA ESPAÑA", "SANTA ROSA", "NUEVO CHIMBOTE", "COSTA VERDE", "DAVID DASSO", "CHIMBOTE", "DIVINO JESUS", "EL ACERO", "CASMA", 
+      "EL AMAUTA URB", "EL BOSQUE", "HUAYLAS", "HUAYLLABAMBA", "RECUAY", "SAN CRISTOBAL DE RAJAN", "SANTA", "ABELARDO PARDO LEZAMETA", "ACAS", "ACOBAMBA", "ACOCHACA", 
+      "ACOPAMPA", "ACZO", "AIJA", "AMASHCA", "ANRA", "ANTA", "ANTONIO RAYMONDI", "AQUIA", "ATAQUERO", "BAMBAS", "BOLOGNESI", "BUENA VISTA ALTA", "CABANA", "CACERES DEL PERU", 
+      "CAJACAY", "CAJAMARQUILLA", "CAJAY", "CANIS", "CARAZ", "CARHUAPAMPA", "CARHUAZ", "CASCA", "CASCAPARA", "CASHAPAMPA", "CATAC", "CHACAS", "CHACCHO", "CHAVIN DE HUANTAR", 
+      "CHINGALPO", "CHINGAS", "CHIQUIAN", "COCHABAMBA", "COCHAPETI", "COCHAS", "COISHCO", "COLCABAMBA", "COLQUIOC", "COMANDANTE NOEL", "CONCHUCOS", "CONGAS", "CORONGO", 
+      "COTAPARACO", "CUSCA", "ELEAZAR GUZMAN BARRON", "FIDEL OLIVAS ESCUDERO", "HUACACHI", "HUACASCHUQUE", "HUACCHIS", "HUACHIS", "HUANCHAY", "HUANDOVAL", "HUARI", "HUARMEY",
+      "HUASTA", "HUATA", "HUAYAN", "HUAYLLACAYAN", "HUAYLLAN", "HUAYLLAPAMPA", "JANGAS", "SAN JUAN", "LA MERCED", "LA PAMPA", "LA PRIMAVERA", "LACABAMBA", "LLACLLIN", "LLAMA", 
+      "LLAMELLIN", "LLAPO", "LLIPA", "LLUMPA", "LUCMA", "MACATE", "MALVAS", "MANCOS", "MANGAS", "MARCA", "MARCARA", "MASIN", "MATACOTO", "MATO", "MIRGAS", "MORO", "MUSGA", "NEPEÑA",
+      "OCROS", "OLLEROS", "PACLLON", "PALLASCA", "PAMPAROMAS", "PAMPAS", "PAMPAS CHICO", "PARARIN", "PARIACOTO", "PARIAHUANCA", "SAMANCO", "SAN MARCOS", "SAN MIGUEL DE CORPANQUI", 
+      "SANTIAGO DE CHILCAS", "SANTO TORIBIO", "SHUPLUY", "SICSIBAMBA", "SIHUAS", "TAPACOCHA", "TARICA", "TAUCA", "TICAPAMPA", "UCO", "YANAC", "YANAMA", "YUNGAY", "YUPAN", "YURACMARCA", 
+      "EL PACIFICO", "EL PESCADOR URB", "EL PROGRESO", "EL SATELITE", "EL TRAPECIO", "ESPERANZA BAJA", "ESPERANZA ALTA", "FLORIDA ALTA", "FLORIDA BAJA", "FRATERNIDAD", "GARATEA", "GARCIA RONDAS URB", 
+      "LA LIBERTAD", "LOS PINOS", "HUANCHAQUITO", "JOSE CARLOS MARIATEGUI", "LA CALETA", "LA MOLINA A.H", "LA UNION", "LA VALANZA", "CIUDAD DE DIOS", "LADERAS DEL NORTE", "LADERAS DEL PPAO", "LAS AMARICAS", 
+      "LAS BEGONIAS A.H", "LAS BRISAS", "LAS DELICIAS", "LAS FLORES A.H", "LAS GARDENIAS", "LAS LOMAS A.H", "LAS PALMAS A.H", "LAS PONCIANAS", "LAS PRADERAS", "LAS QUINTANAS", "LOS ALAMOS", 
+      "LOS ANGELES A.H", "LOS CEDROS", "LOS CIPRESES", "LOS DELFINES A.H", "LOS HEROES", "LOS GERANIOS", "LOS LICENCIADOS A.H", "LOS OLIVOS", "MANUEL SEOANE", "MARISCAL LUZURIAGA", "MIGUEL GRAU", 
+      "MIRAMAR ALTO", "MIRAMAR BAJO", "NUEVA GENERACION", "PACHACUTEC A.H", "PASEO DEL MAR DOMUS", "PENSACOLA", "PORTALES URB", "LA VICTORIA", "PPAO", "RAMAL PLAYA", "RAMON CASTILLA", "SAN DIEGO", 
+      "SAN FELIPE A.H", "SAN FRANCISCO DE ASIS", "SAN ISIDRO", "SAN RAFAEL", "SANCHEZ MILLA", "SANTA CRISTINA", "SANTA IRENE", "SANTO TOMAS", "SEÑOR DE LOS MILAGROS", "TAHUANTISUYO", "TERESA DE CALCUTA A.H", 
+      "TERMINAL MEGA PERLA", "VICTOR RAUL", "VILLA DEL MAR", "VILLA DEL SUR UPIS", "VILLA EL ABOGADO", "VILLA HERMOSA", "VILLA JESUS", "VILLA MARIA", "VILLA MERCEDES UPIS", "VILLA AGRARIA URB", "PORVENIR", 
+      "VILLA MAGISTERIAL", "MIRAFLORES", "SAN MIGUEL", "VISTA ALEGRE" ],
+      Apurímac: ["JOSÉ MARIA ARGUEDAS", "ABANCAY", "TALAVERA", "ANDAHUAYLAS", "SAN JERONIMO", "SANTA MARIA DE CHICMO", "CHACOCHE", "CIRCA", "CURAHUASI", "HUANIPACA", "LAMBRAMA", 
+      "PICHIRHUA", "SAN PEDRO DE CACHORA", "ANDARAPA", "CHIARA", "HUANCARAMA", "HUANCARAY", "HUAYANA", "KISHUARA", "PACOBAMBA", "PACUCHA", "POMACOCHA", "SAN ANTONIO DE CACHI", 
+      "TUMAY HUARACA", "TURPO", "KAQUIABAMBA", "ANTABAMBA", "EL ORO", "ANCO_HUALLO", "CHALHUANCA", "SANTA ROSA", "OROPESA", "CHAPIMARCA", "LUCRE", "COCHARCAS", "HUACCANA", "ONGOY", 
+      "URANMARCA", "RANRACANCHA", "CHUQUIBAMBILLA", "SAN ANTONIO", "HUAQUIRCA", "JUAN ESPINOZA MEDRANO", "PACHACONAS", "SABAINO", "CARAYBAMBA", "COLCABAMBA", "COTARUSE", "HUAYLLO",
+      "JUSTO APU SAHUARAURA", "POCOHUANCA", "SAN JUAN DE CHACÑA", "SAÑAYCA", "SORAYA", "TAPAIRIHUA", "TINTAY", "TORAYA", "TAMBOBAMBA", "COTABAMBAS", "COYLLURQUI", "HAQUIRA", "MARA", 
+      "CURPAHUASI", "GAMARRA", "HUAYLLATI", "MAMARA", "MICAELA BASTIDAS", "PATAYPAMPA", "TURPAY", "VIRUNDO", "CURASCO", "OCOBAMBA", "VILCABAMBA", "CHALLHUAHUACHO", "PAMPACHIRI", 
+      "CHINCHEROS", "ANCO-HUALLO", "TAMBURCO", "SAN MIGUEL DE CHACCRAMPA", "CAPAYA", "YANACA", "PROGRESO" ],
+      Arequipa: [ "SAN JUAN DE TARUCANI", "SANTA ISABEL DE SIGUAS", "SANTA RITA DE SIGUAS", "SAYLA", "SIBAYO", "TAPAY", "TAURIA", "CERRO VERDE", "TIPAN", "TISCO", "TOMEPAMPA", 
+      "TORO", "TUTI", "UÑON", "URACA", "VIRACO", "VITOR", "YARABAMBA", "CHIGUATA", "CAMANA", "YANQUE", "YAUCA", "YANAQUIHUA", "CIUDAD DE DIOS", "ALTO SELVA ALEGRE", "MARIANO MELGAR", 
+      "PAUCARPATA", "SACHACA", "JOSÉ LUIS BUSTAMANTE Y RIVERO", "JACOBO HUNTER", "SOCABAYA", "CERRO COLORADO", "YANAHUARA", "CAYMA", "MIRAFLORES", "CONGATA", "CIUDAD MUNICIPAL", 
+      "TIABAYA", "HUNTER MANSION", "CHARACATO", "SABANDIA", "CONO NORTE", "YURA", "UCHUMAYO", "CABANACONDE", "JOSÉ MARIA QUIMPER", "MEJIA", "SOCABAYA / LA CAMPIÑA", "SOCABAYA / HORACIOZEBALLOS", 
+      "CERCADO", "ACARI", "ACHOMA", "ALCA", "ANDAGUA", "ANDARAY", "APLAO", "AREQUIPA", "ATICO", "ATIQUIPA", "AYO", "BELLA UNION", "CAHUACHO", "CALLALLI", "CARAVELI", "CAYARANI", "CAYLLOMA", 
+      "CHACHAS", "CHALA", "CHAPARRA", "CHARCANA", "CHICHAS", "CHILCAYMARCA", "CHIVAY", "CHOCO", "CHUQUIBAMBA", "COCACHACRA", "COPORAQUE", "COTAHUASI", "DEAN VALDIVIA", "HUAMBO", "HUANCA", 
+      "HUANCARQUI", "HUANUHUANU", "HUAYNACOTAS", "ICHUPAMPA", "IRAY", "ISLAY", "JAQUI", "LA JOYA", "LARI", "LLUTA", "LOMAS", "MACA", "MACHAGUAY", "MADRIGAL", "MAJES", "MARIANO NICOLAS VALCARCEL", 
+      "MARISCAL CACERES", "MOLLEBAYA", "MOLLENDO", "NICOLAS DE PIEROLA", "OCOÑA", "ORCOPAMPA", "PAMPACOLCA", "PAMPAMARCA", "POCSI", "POLOBAYA", "PUNTA DE BOMBON", "PUYCA", "QUECHUALLA", "QUEQUEÑA", 
+      "QUICACHA", "QUILCA", "RIO GRANDE", "SALAMANCA", "SAMUEL PASTOR", "SAN ANTONIO DE CHUCA", "SAN JUAN DE SIGUAS", "SELVA ALEGRE", "TIABAYA TUNALES" ],
+      Ayacucho: ["CANAYRE", "UCHURACCAY", "PUCACOLPA", "ANCHIHUAY", "CARMEN ALTO", "JESUS NAZARENO", "CANGALLO", "HUANTA", "SAN MIGUEL", "AYNA", "TAMBO", "QUINUA", "SANTIAGO DE PISCHA", "SOCOS", "TAMBILLO", "ANDRÉS AVELINO CACERES DORREGARAY", "VINCHOS", "CHUSCHI", "PARAS", "PUQUIO", "AUCARA", "CABANA", "CARMEN SALCEDO", "ACOCRO", "ACOS VINCHOS", "OCROS", "SAN JOSÉ DE TICLLAS", "LOS MOROCHUCOS", "MARIA PARADO DE BELLIDO", "TOTOS", "SANCOS", "CARAPO", "SACSAMARCA", "SANTIAGO DE LUCANAMARCA", "AYAHUANCO", "HUAMANGUILLA", "IGUAIN", "LURICOCHA", "SIVIA", "LLOCHEGUA", "ANCO", "CHILCAS", "CHUNGUI", "LUIS CARRANZA", "SANTA ROSA", "SAMUGARI", "SAN PEDRO", "BELÉN", "CONCEPCION", "INDEPENDENCIA", "CHIPAO", "HUAC-HUAS", "LARAMATE", "LEONCIO PRADO", "LLAUTA", "LUCANAS", "OCAÑA", "OTOCA", "SAISA", "SAN CRISTOBAL", "SAN JUAN", "SANCOS", "SANTA ANA DE HUAYCAHUACHO", "SANTA LUCIA", "CORACORA", "CHUMPI", "CORONEL CASTAÑEDA", "PACAPAUSA", "PULLO", "PUYUSCA", "SAN FRANCISCO DE RAVACAYCO", "UPAHUACHO", "PAUSA", "COLTA", "LAMPA", "MARCABAMBA", "OYOLO", "PARARCA", "SAN JAVIER DE ALPABAMBA", "SAN JOSÉ DE USHUA", "SARA SARA", "QUEROBAMBA", "CHALCOS", "CHILCAYOC", "HUACAÑA", "PAICO", "SAN PEDRO DE LARCAY", "SAN SALVADOR DE QUIJE", "SANTIAGO DE PAUCARAY", "SORAS", "HUANCAPI", "ALCAMENCA", "APONGO", "ASQUIPATA", "CANARIA", "CAYARA", "COLCA", "HUANCARAYLLA", "HUAYA", "SARHUA", "VILCANCHOS", "VILCAS HUAMAN", "ACCOMARCA", "CARHUANCA", "HUAMBALPA", "SAURAMA", "VISCHONGO", "AYACUCHO", "SAN JUAN BAUTISTA", "PACAYCASA", "CHAVIÑA", "SAN PEDRO DE PALCO", "CORCULLA", "CHIARA", "SANTILLANA", "MORCOLLA", "HUAMANQUIQUIA"],
+      Cajamarca: ["MOLLEPAMPA", "COLUMBO", "ROSA MOLLEPATA", "HUACALOMA", "URUBAMA", "LUCMACUCHO", "SANTA BARBARA", "SHUDA", "LA MOLINA", "EL MOLINO", "ALAN GARCIA", "AJOS CANCHA", "BAÑOS DEL INCA", "HUACARIZ", "CRU BLANCA", "SHAULLO", "MARCOPAMPA", "LA PACCHA", "PUYLLUCANA", "VIADUCTO", "ISCOCONGA", "LLACANORA", "OTUZCO", "CERRILLO", "LA COLLPA", "CHETILLA", "COSPAN", "SANTA CRUZ DE TOLEDO", "MAGDALENA", "ENCAÑADA", "MATARA", "NAMORA", "CHOTA", "JAÉN", "SAN JUAN", "CAJABAMBA", "CACHACHI", "CONDEBAMBA", "SITACOCHA", "CHUMUCH", "CORTEGANA", "HUASMIN", "JORGE CHAVEZ", "JOSÉ GALVEZ", "MIGUEL IGLESIAS", "OXAMARCA", "SOROCHUCO", "SUCRE", "UTCO", "ANGUIA", "CHADIN", "CHIGUIRIP", "CHIMBAN", "CHOROPAMPA", "COCHABAMBA", "CONCHAN", "HUAMBOS", "LAJAS", "LLAMA", "MIRACOSTA", "PACCHA", "PION", "QUEROCOTO", "TACABAMBA", "TOCMOCHE", "CHALAMARCA", "CONTUMAZA", "CHILETE", "CUPISNIQUE", "GUZMANGO", "SAN BENITO", "TANTARICA", "YONAN", "CUTERVO", "CALLAYUC", "CHOROS", "CUJILLO", "PIMPINGOS", "QUEROCOTILLO", "SAN ANDRÉS DE CUTERVO", "SAN JUAN DE CUTERVO", "SAN LUIS DE LUCMA", "SANTA CRUZ", "SANTO DOMINGO DE LA CAPILLA", "SANTO TOMAS", "SOCOTA", "TORIBIO CASANOVA", "CHUGUR", "HUALGAYOC", "BELLAVISTA", "YANAMARCA", "HUARACLLA", "CHONTALI", "COLASAY", "HUABAL", "LAS PIRIAS", "POMAHUACA", "PUCARA", "SALLIQUE", "SAN JOSÉ DEL ALTO", "CHANCAY", "SANTA ROSA", "SAN IGNACIO", "CHIRINOS", "HUARANGO", "LA COIPA", "NAMBALLE", "SAN JOSÉ DE LOURDES", "TABACONAS", "EDUARDO VILLANUEVA", "GREGORIO PITA", "ICHOCAN", "JOSÉ MANUEL QUIROZ", "JOSÉ SABOGAL", "SAN MIGUEL", "BOLIVAR", "CALQUIS", "CATILLUC", "EL PRADO", "LA FLORIDA", "LLAPA", "NIEPOS", "SAN GREGORIO", "SAN SILVESTRE DE COCHAN", "TONGOD", "UNION AGUA BLANCA", "SAN PABLO", "SAN BERNARDINO", "SAN LUIS", "TUMBADEN", "SANTA CRUZ", "ANDABAMBA", "CATACHE", "LA ESPERANZA", "NINABAMBA", "PULAN", "SAUCEPAMPA", "SEXI", "UTICYACU", "YAUYUCAN", "CAJAMARCA", "LOS BAÑOS DEL INCA", "ASUNCION", "JESUS", "SAN FELIPE", "CELENDIN", "LA LIBERTAD DE PALLAN", "SAN JUAN DE LICUPIS", "SANTA CRUZ DE TOLED", "LA RAMADA", "BAMBAMARCA", "PEDRO GALVEZ", "NANCHOC", "CHANCAYBAÑOS"],
+      Callao: ["CALLAO", "BELLAVISTA", "CARMEN DE LA LEGUA REYNOSO", "LA PERLA", "LA PUNTA", "VENTANILLA", "MI PERU" ],
+      Cusco: ["ACCHA", "ACOMAYO", "ACOPIA", "ACOS", "ALTO PICHIGUA", "ANCAHUASI", "ANDAHUAYLILLAS", "CACHIMAYO", "CAICAY", "CALCA", "CAMANTI", "CAPACMARCA", "CCAPI", "CCARHUAYO", "CCATCA", "CCORCA", "CHALLABAMBA", "CHAMACA", "CHECACUPE", "CHECCA", "CHINCHAYPUJIO", "CHINCHERO", "COLCHA", "COLQUEMARCA", "COLQUEPATA", "COMBAPATA", "CONDOROMA", "COPORAQUE", "COYA", "CUSIPATA", "ECHARATE", "ESPINAR", "HUANCARANI", "HUANOQUITE", "HUARO", "HUAROCONDO", "HUAYLLABAMBA", "HUAYOPATA", "KIMBIRI", "KOSÑIPATA", "LAMAY", "LANGUI", "LARES", "LAYO", "LIMATAMBO", "LIVITACA", "LLUSCO", "LUCRE", "MACHUPICCHU", "MARANGANI", "MARANURA", "MARAS", "MARCAPATA", "MOLLEPATA", "MOSOC LLACTA", "OCOBAMBA", "OCONGATE", "OCORURO", "OLLANTAYTAMBO", "OMACHA", "OROPESA", "PACCARITAMBO", "PALLPATA", "PAMPAMARCA", "PARURO", "PAUCARTAMBO", "PICHARI", "PICHIGUA", "PILLPINTO", "PISAC", "PITUMARCA", "POMACANCHI", "INKAWASI", "VILLA VIRGEN", "VILLA KINTIARINA", "POROY", "PUCYURA", "RONDOCAN", "SAN PABLO", "SAN PEDRO", "SANGARARA", "SANTO TOMAS", "SAYLLA", "SICUANI", "TARAY", "TINTA", "YANAOCA", "YANATILE", "ZURITE", "KUNTURKANKI", "QUEHUE", "SANTA ANA", "SANTA TERESA", "SUYCKUTAMBO", "TUPAC AMARU", "URCOS", "URUBAMBA", "VELILLE", "VILCABAMBA", "YUCAY", "QUIQUIJANA", "YAURISQUE", "CUSCO", "WANCHAQ", "SANTIAGO", "SAN JERONIMO", "ANTA", "SAN SALVADOR", "QUELLOUNO", "QUIÑOTA", "SAN SEBASTIAN"],
+      Huancavelica: ["YAULI", "ACOBAMBA", "ACORIA", "IZCUCHACA", "PAUCARA", "LIRCAY", "PALCA", "ANTA", "ACOBAMBILLA", "CUENCA", "HUACHOCOLPA", "HUAYLLAHUARA", "LARIA", "MANTA", "MARISCAL CACERES", "MOYA", "NUEVO OCCORO", "PILCHACA", "VILCA", "HUANDO", "ANDABAMBA", "CAJA", "MARCAS", "POMACOCHA", "ROSARIO", "ANCHONGA", "CALLANMARCA", "CCOCHACCASA", "CHINCHO", "CONGALLA", "HUANCA-HUANCA", "JULCAMARCA", "SAN ANTONIO DE ANTAPARCO", "SANTO TOMAS DE PATA", "SECCLLA", "CASTROVIRREYNA", "QUICHUAS", "ANDAYMARCA", "CHURCAMPA", "PAMPAS", "SAN JUAN", "ANCO", "HUAYTARA", "SAN ISIDRO", "TAMBO", "AURAHUA", "CAPILLAS", "CHUPAMARCA", "COCAS", "HUACHOS", "HUAMATAMBO", "MOLLEPAMPA", "SANTA ANA", "TANTARA", "TICRAPO", "CHINCHIHUASI", "LOCROJA", "PAUCARBAMBA", "SAN MIGUEL DE MAYOCC", "SAN PEDRO DE CORIS", "PACHAMARCA", "AYAVI", "CORDOVA", "HUAYACUNDO ARMA", "LARAMARCA", "OCOYO", "PILPICHACA", "QUERCO", "SAN ANTONIO DE CUSICANCHA", "SAN FRANCISCO DE SANGAYAICO", "SANTIAGO DE CHOCORVOS", "SANTIAGO DE QUIRAHUARA", "SANTO DOMINGO DE CAPILLAS", "ACOSTAMBO", "ACRAQUIA", "AHUAYCHA", "COLCABAMBA", "HUACHOCOLPA", "HUARIBAMBA", "ÑAHUIMPUQUIO", "PAZOS", "QUISHUAR", "SALCABAMBA", "SALCAHUASI", "SAN MARCOS DE ROCCHAC", "SURCUBAMBA", "TINTAY PUNCU", "COSME", "HUANCAVELICA", "EL CARMEN", "CONAYCA", "ASCENSION", "HUAYLLAY GRANDE", "ARMA", "LA MERCED", "QUITO-ARMA", "DANIEL HERNANDEZ", "HUANDO"],
+      Huánuco: ["QUISQUI (KICHKI)", "AMARILIS", "CHINCHAO", "CHURUBAMBA", "MARGOS", "SAN FRANCISCO DE CAYRAN", "SAN PEDRO DE CHAULAN", "SANTA MARIA DEL VALLE", "YARUMAYO", "PILLCO MARCA", "YACUS", "AMBO", "SAN RAFAEL", "TOMAY KICHWA", "RUPA-RUPA", "JOSÉ CRESPO Y CASTILLO", "JESUS", "MIRAFLORES", "CAYNA", "COLPAS", "CONCHAMARCA", "HUACAR", "SAN FRANCISCO", "CHUQUIS", "MARIAS", "PACHAS", "RIPAN", "SHUNQUI", "SILLAPATA", "YANAS", "HUACAYBAMBA", "CANCHABAMBA", "COCHABAMBA", "PINRA", "LLATA", "ARANCAY", "JACAS GRANDE", "JIRCAN", "MONZON", "PUNCHAO", "PUÑOS", "SINGA", "TANTAMAYO", "DANIEL ALOMIA ROBLES", "HERMILIO VALDIZAN", "LUYANDO", "MARIANO DAMASO BERAUN", "HUACRACHUCO", "CHOLON", "SAN BUENAVENTURA", "PANAO", "MOLINO", "UMARI", "BAÑOS", "JIVIA", "QUEROPALCA", "RONDOS", "SAN FRANCISCO DE ASIS", "SAN MIGUEL DE CAURI", "CHAVINILLO", "CAHUAC", "CHACABAMBA", "JACAS CHICO", "OBAS", "PAMPAMARCA", "CHORAS", "PUERTO INCA", "CODO DEL POZUZO", "HONORIA", "TOURNAVISTA", "YUYAPICHIS", "HUANUCO", "LA UNION", "QUISQUI", "QUIVILLA", "CHAVIN DE PARIARCA", "CHAGLLA", "APARICIO POMARES"],
+
+      Ica: ["SUBTANJALLA", "TATE", "PACHACUTEC", "SANTIAGO", "LA TINGUIÑA", "OCUCAJE", "NASCA", "SALAS", "SAN JOSÉ DE LOS MOLINOS", "YAUCA DEL ROSARIO", "ALTO LARAN", "CHAVIN", "EL CARMEN", "GROCIO PRADO", "SUNAMPE", "PISCO", "HUANCANO", "INDEPENDENCIA", "SAN ANDRÉS", "SAN CLEMENTE", "TUPAC AMARU INCA", "CHANGUILLO", "MARCONA", "VISTA ALEGRE", "PALPA", "LLIPATA", "RIO GRANDE", "HUMAY", "TIBILLO", "SAN JUAN DE YANAC", "EL ROSARIO", "YAURILLA", "CERRO PRIETO", "LOS MOLINOS", "GUADALUPE", "LOS AQUIJES", "PARCONA", "SAN JUAN BAUTISTA", "PUEBLO NUEVO", "CHINCHA ALTA", "ICA", "CHINCHA BAJA", "TAMBO DE MORA", "PARACAS", "NAZCA", "EL INGENIO", "SANTA CRUZ", "SAN PEDRO DE HUACARPANA", "HUAYTARA", "CERCADO DE ICA", "SAN JUAQUIN NUEVO Y VIEJO", "COMATRANA", "TIERRA PROMETIDA HUARANGO", "CAMINO LA HUEGA", "HUACACHINA", "FONAVI", "LA ANGOSTURA", "TINGUIÑA", "CAMINO DE REYES", "COLLAZOS"],
+
+      Junín: ["EL TAMBO", "HUANCAN", "INGENIO", "QUILCAS", "SAN AGUSTIN", "SAN JERONIMO DE TUNAN", "SAÑO", "SICAYA", "CULLHUAS", "HUACRAPUQUIO", "QUICHUAY", "CARHUACALLANGA", "CHACAPAMPA", "CHICCHE", "CHONGOS ALTO", "COLCA", "HUASICANCHA", "PARIAHUANCA", "PUCARA", "SANTO DOMINGO DE ACOBAMBA", "ACO", "ANDAMARCA", "CHAMBARA", "VIZCATAN DEL ENE", "CHANCHAMAYO", "SAN RAMON", "PERENE", "PICHANAQUI", "ACOLLA", "APATA", "ATAURA", "CANCHAYLLO", "EL MANTARO", "HUAMALI", "HUARIPAMPA", "HUERTAS", "JANJAILLO", "LEONOR ORDOÑEZ", "MARCO", "MUQUI", "MUQUIYAUYO", "PACA", "PARCO", "POMACANCHA", "RICRAN", "SAN LORENZO", "SAUSA", "SINCOS", "TUNAN MARCA", "JUNIN", "CARHUAMAYO", "MAZAMARI", "ACOBAMBA", "HUASAHUASI", "LA UNION", "COMAS", "MITO", "YAULI", "YAUYOS", "RIO TAMBO", "PALCA", "COCHAS", "HEROINAS TOLEDO", "MARISCAL CASTILLA", "NUEVE DE JULIO", "SAN JOSÉ DE QUERO", "SAN LUIS DE SHUARO", "VITOC", "LLOCLLAPAMPA", "MASMA", "MASMA CHICCHE", "MOLINOS", "MONOBAMBA", "PACCHA", "ONDORES", "COVIRIALI", "LLAYLLA", "PAMPA HERMOSA", "PANGOA", "RIO NEGRO", "HUARICOLCA", "SAN PEDRO DE CAJAS", "LA OROYA", "SANTA ROSA DE SACCO", "YAULI", "AHUAC", "HUAMANCACA CHICO", "TRES DE DICIEMBRE", "YANACANCHA", "PALCAMAYO", "TAPO", "CHACAPALPA", "HUAY-HUAY", "MARCAPOMACOCHA", "PACCHA", "SANTA BARBARA DE CARHUACAYAN", "SUITUCANCHA", "HUACHAC", "SAN JUAN DE JARPA", "SAN JERONIMO", "PERIFERICOS", "PALIAN", "SAN CARLOS", "LA RIVERA", "CAJAS CHICO", "COTO COTO", "SAN AGUSTIN DE CAJAS", "CHUPACA", "CHUPURO", "HUAYUCACHI", "VIQUES", "CONCEPCION", "SACAYA", "UÑAS", "JAUJA", "HUALHUAS", "MATAHUASI", "HUAMANCACA", "TARMA", "CHILCA", "PILCOMAYO", "SAPALLANGA", "SANTA ROSA DE OCOPA", "CURICACA", "JULCAN", "PANCAN", "SAN PEDRO DE CHUNAN", "SATIPO", "MOROCOCHA", "CHONGOS BAJO", "ORCOTUNA", "MANZANARES", "ULCUMAYO", "SAN JUAN DE ISCOS", "HUANCAYO" ],
+
+      "La libertad": ["ANGASMARCA", "ASCOPE", "BAMBAMARCA", "BOLIVAR", "BULDIBUYO", "CACHICADAN", "CALAMARCA", "CARABAMBA", "CASA GRANDE", "CASCAS", "CHEPEN", "CHICAMA", "CHILLIA", "CHOCOPE", "CHUGAY", "BUENOS AIRES", "FLORENCIA DE MORA", "COCHORCO", "CONDORMARCA", "CURGOS", "GUADALUPITO", "HUAMACHUCO", "HUANCASPATA", "HUARANCHAL", "HUASO", "PAIJAN", "PARANDAY", "PARCOY", "PATAZ", "PIAS", "POROTO", "QUIRUVILCA", "RAZURI", "SALPO", "SAN JOSÉ", "SAN PEDRO DE LLOC", "SANAGORAN", "SANTA CRUZ DE CHUCA", "SANTIAGO DE CAO", "SANTIAGO DE CHUCO", "SARIN", "SARTIMBAMBA", "SAYAPULLO", "SIMBAL", "SINSICAP", "SITABAMBA", "TAURIJA", "TAYABAMBA", "TRUJILLO", "UCHUMARCA", "UCUNCHA", "URPAY", "USQUIL", "VICTOR LARCO HERRERA", "VIRU", "PUEBLO NUEVO", "GUADALUPE", "AGALLPAMPA", "LAREDO", "HUAYLILLAS", "HUAYO", "JEQUETEPEQUE", "JULCAN", "LA CUESTA", "LONGOTEA", "LUCMA", "MACHE", "MARCABAL", "MARMOT", "LA ESPERANZA", "MOLLEPATA", "ONGON", "PORVENIR", "TRUJILLO CENTRO", "MILAGRO", "MOCHE", "OTUZCO", "PACANGA", "PACASMAYO", "CHAO", "MAGDALENA DE CAO", "HUANCHACO", "SALAVERRY", "CHARAT", "MOLLEBAMBA", "SANTIAGO DE CHALLAS", "EL PORVENIR"],
+
+      Lambayeque: ["CAÑARIS", "CAYALTI", "CHOCHOPE", "CHONGOYAPE", "ETEN PUERTO", "FERREÑAFE", "ILLIMO", "JAYANCA", "JOSÉ LEONARDO ORTIZ", "MANUEL ANTONIO MESONES MURO", "MOCHUMI", "MOTUPE", "NUEVA ARICA", "OLMOS", "OYOTUN", "PACORA", "PATAPO", "PICSI", "PITIPO", "PUCALA", "SALAS", "TUCUME", "ETEN", "PUEBLO NUEVO", "SAÑA", "TUMAN", "FEREÑAFE", "JOSE LEONARDO ORTIS", "LA PRIMAVERA", "CALETA SAN JOSE", "LAGUNAS", "ZAÑA", "MORROPE", "SAN JOSÉ", "LA VICTORIA", "CHICLAYO", "SANTA ROSA", "INCAHUASI", "MONSEFU", "REQUE", "POMALCA", "PIMENTEL", "LAMBAYEQUE"],
+      Lima: ["PUNTA HERMOSA", "PUNTA NEGRA", "SAN BARTOLO", "MIRAFLORES", "SAN VICENTE DE CAÑETE", "BARRANCA", "PACHACAMAC", "CERRO AZUL", "CHILCA", "IMPERIAL", "PATIVILCA", "SUPE", "SUPE PUERTO", "CALANGO", "COAYLLO", "LUNAHUANA", "CANTA", "ARAHUAY", "HUAMANTANGA", "HUAROS", "LACHAQUI", "SAN BUENAVENTURA", "SANTA ROSA DE QUIVES", "LINCE", "LOS OLIVOS", "LURIGANCHO", "LURIN", "MAGDALENA DEL MAR", "PUEBLO LIBRE", "PUENTE PIEDRA", "SAN BORJA", "SAN ISIDRO", "SAN JUAN DE LURIGANCHO", "SAN JUAN DE MIRAFLORES", "SAN LUIS", "SAN MARTIN DE PORRES", "CAJATAMBO", "COPA", "GORGOR", "MANAS", "HUACHO", "HUALMAY", "HUAURA", "MALA", "QUILMANA", "SAN ANTONIO", "SANTA CRUZ DE FLORES", "PACARAN", "ZUÑIGA", "CALETA DE CARQUIN", "SANTA MARIA", "SAYAN", "OYON", "MATUCANA", "ANTIOQUIA", "CALLAHUANCA", "CARAMPOMA", "CHICLA", "CUENCA", "HUACHUPAMPA", "HUANZA", "HUAROCHIRI", "LAHUAYTAMBO", "LANGA", "LARAOS", "RICARDO PALMA", "SAN ANDRÉS DE TUPICOCHA", "SAN ANTONIO", "SAN BARTOLOMÉ", "SAN DAMIAN", "SAN JUAN DE IRIS", "SAN JUAN DE TANTARANCHE", "SAN LORENZO DE QUINTI", "SAN MATEO", "SAN MATEO DE OTAO", "SAN PEDRO DE HUANCAYRE", "SANGALLAYA", "SANTA CRUZ DE COCACHACRA", "SANTA EULALIA", "SANTIAGO DE ANCHUCAYA", "SANTIAGO DE TUNA", "SANTO DOMINGO DE LOS OLLEROS", "SURCO", "ATAVILLOS ALTO", "ATAVILLOS BAJO", "AUCALLAMA", "IHUARI", "LAMPIAN", "PACARAOS", "SANTA CRUZ DE ANDAMARCA", "SUMBILCA", "VEINTISIETE DE NOVIEMBRE", "AMBAR", "CHECRAS", "LEONCIO PRADO", "PACCHO", "SANTA LEONOR", "ANDAJES", "CAUJUL", "COCHAMARCA", "NAVAN", "ALLAUCA", "YAUYOS", "ALIS", "AYAVIRI", "AZANGARO", "CACRA", "CARANIA", "CATAHUASI", "CHOCOS", "COCHAS", "COLONIA", "HONGOS", "HUAMPARA", "HUANCAYA", "HUANTAN", "HUAÑEC", "LARAOS", "LINCHA", "MADEAN", "OMAS", "PUTINZA", "QUINCHES", "QUINOCAY", "SAN JOAQUIN", "SAN PEDRO DE PILAS", "TANTA", "TAURIPAMPA", "TOMAS", "VIÑAC", "VITIS", "PACHANGARA", "RIMAC", "SANTA ANITA", "HUARAL", "CHANCAY", "PUCUSANA", "ASIA", "NUEVO IMPERIAL", "PARAMONGA", "ANCON", "SAN LUIS", "VEGUETA", "MARIATANA", "SAN PEDRO DE CASTA", "AYAUCA", "HUANGASCAR", "TUPE", "SAN MIGUEL DE ACOS", "HUANCAPON", "LIMA", "ATE", "BARRANCO", "BREÑA", "CARABAYLLO", "CHACLACAYO", "CHORRILLOS", "CIENEGUILLA", "COMAS", "EL AGUSTINO", "INDEPENDENCIA", "JESUS MARIA", "LA VICTORIA", "SAN MIGUEL", "SANTA MARIA DEL MAR", "SANTA ROSA", "SANTIAGO DE SURCO", "SURQUILLO", "VILLA EL SALVADOR", "VILLA MARIA DEL TRIUNFO", "MIRAFLORES", "LA MOLINA"],
+      Loreto: ["Punchana", "Belén", "San Juan Bautista", "Alto Nanay", "Torres Causana", "Nauta", "Urarinas", "Requena", "Lagunas", "Fernando Lores", "Indiana", "Mazan", "Napo", "Yavari", "San Pablo", "Alto Tapiche", "Capelo", "Maquia", "Puinahua", "Saquena", "Soplin", "Tapiche", "Jenaro Herrera", "Yurimaguas", "Santa Cruz", "Ramon Castilla", "Pebas", "Las Amazonas", "Balsapuerto", "Jeberos", "Tigre", "Trompeteros", "Sarayacu", "Putumayo", "Rosa Panduro", "Teniente Manuel Clavero", "Yaguas", "Contamana", "Inahuaya", "Padre Marquez", "Vargas Guerra", "Yaquerana", "Barranca", "Cahuapanas", "Manseriche", "Morona", "Pastaza", "Andoas", "Iquitos", "Parinari", "Pampa Hermosa", "Emilio San Martin", "Teniente Manuel Clavero", "Teniente Cesar Lopez Rojas", "Putumayo"],
+      "Madre de Dios": ["Las Piedras", "Laberinto", "Manu", "Fitzcarrald", "Madre de Dios", "Huepetuhe", "Iberia", "Tahuamanu", "Inambari", "Iñapari", "Tambopata"],
+
+      Moquegua: ["Ilo", "Carumas", "Cuchumbaya", "San Cristobal", "Omate", "Chojata", "Coalaque", "Ichuña", "La Capilla", "Lloque", "Matalaque", "Puquina", "Quinistaquillas", "Ubinas", "Yunga", "Pacocha", "Torata", "Moquegua", "El Algarrobal", "Samegua"],
+
+      Pasco: ["Chaupimarca", "Huayllay", "Ninacaca", "Simon Bolivar", "Ticlacayán", "Oxapampa", "Pallanchacra", "Paucartambo", "Yanacancha", "Vilcabamba", "Huachon", "Huariaca", "San Francisco de Asis de Yarusyacan", "Tinyahuanco", "Vicco", "Chacayan", "Goyllarisquizga", "Paucar", "San Pedro de Pillao", "Tapuc", "Chontabamba", "Huancabamba", "Palcazu", "Pozuzo", "Puerto Bermudez", "Constitucion", "Yanahuanca", "Villa Rica", "Santa Ana de Tusi"],
+
+      Piura: ["Amotape", "Arenal", "Ayabaca", "Bellavista", "Bellavista de la Union", "Bernal", "Buenos Aires", "Chalaco", "Chulucanas", "Colan", "Cristo Nos Valga", "Cura Mori", "El Alto", "El Carmen de la Frontera", "El Tallan", "Frias", "Huancabamba", "Huarmaca", "Ignacio Escudero", "Jilili", "La Brea", "La Matanza", "La Union", "Lagunas", "Lalaquiz", "Lancones", "Las Lomas", "Lobitos", "Los Organos", "Mancora", "Marcavelica", "Miguel Checa", "Montero", "Morropon", "Pacaipampa", "Paimas", "Paita", "Parinas", "Querecotillo", "Rinconada Llicuar", "Salitral", "San Juan de Bigote", "San Miguel de El Faique", "Santa Catalina de Mossa", "Santo Domingo", "Sapillica", "Sechura", "Sicchez", "Sondor", "Sondorillo", "Suyo", "Tamarindo", "Tambo Grande", "Vice", "Vichayal", "Yamango", "Atacaos", "26 de Octubre", "La Legua", "Salitral", "La Huaca", "Canchaque", "La Arena", "Piura", "Veintiseis de Octubre", "Castilla", "Catacaos", "Sullana"],
+
+      Puno: ["Palca", "Paratia", "Patambuco", "Paucarcolla", "Pedro Vilca Apaza", "Phara", "Achaya", "Acora", "Ajoyani", "Alto Inambari", "Ananea", "Anapia", "Arapa", "Asillo", "Atuncolla", "Ayapata", "Azangaro", "Cabana", "Cabanilla", "Calapuja", "Caminaca", "Capachica", "Capazo", "Caracoto", "Chucuito", "Chupa", "Coasa", "Coata", "Cojata", "Conduriri", "Conima", "Copani", "Corani", "Cruceo", "Cuturapi", "Pichacani", "Pilcuyo", "Pisacoma", "Plateria", "Pomata", "Potoni", "Pucara", "Pusi", "Putina", "Quiaca", "Quilcapuncu", "Saman", "San Anton", "San Antonio", "San Gaban", "San José", "San Juan de Salinas", "San Juan del Oro", "San Pedro de Putina Punco", "Sandia", "Santa Lucia", "Santa Rosa", "Santiago de Pupuja", "Sina", "Tilali", "Tinicachi", "Tiquillaca", "Tirapata", "Umachiri", "Unicachi", "Usicayos", "Vilavila", "Vilque", "Vilque Chico", "Yanahuaya", "Yunguyo", "Zepita", "Mańazo", "Santa Rosa", "Ayaviri", "Cuyocuyo", "Desaguadero", "Huacullani", "Huancane", "Huata", "Cabanillas", "Huatasani", "Rosaspata", "Amantani", "Antauta", "Cupi", "Huayrapata", "Ilave", "Inchupalla", "Taraco", "Ituata", "José Domingo Choquehuanca", "Juli", "Kelluyo", "Lampa", "Limbani", "Llalli", "Macari", "Macusani", "Moho", "Muñani", "Nicasio", "Nuñoa", "Ocuviri", "Ollachea", "Ollaraya", "Orurillo", "Puno", "San Miguel", "Juliaca"],
+
+      "San Martín": ["Moyobamba", "Bellavista", "Calzada", "Habana", "Jepelacio", "Soritor", "Yantalo", "Alto Biavo", "Bajo Biavo", "Huallaga", "San Pablo", "San Rafael", "Santa Rosa", "Saposoa", "Alto Saposoa", "El Eslabon", "Piscoyacu", "Sacanche", "Tingo de Saposoa", "Lamas", "San José de Sisa", "Agua Blanca", "San Martin", "Shatoja", "Alonso de Alvarado", "Barranquita", "Caynarachi", "Buenos Aires", "Tarapoto", "El Porvenir", "La Banda de Shilcayo", "Morales", "Tocache", "Cuñumbuqui", "Pinto Recodo", "Rumisapa", "Juanjui", "Campanilla", "Huicungo", "Caspisapa", "Pucacaca", "San Cristobal", "Nueva Cajamarca", "Pardo Miguel", "Posic", "Cacatachi", "San Roque de Cumbaza", "Shanao", "Tabalosos", "Zapatero", "Pachiza", "Pajarillo", "Pillhuana", "Shamboyacu", "Tingo de Ponasa", "Tres Unidos", "San Fernando", "Yorongos", "Yuracyacu", "Alberto Leveau", "Chazuta", "Chipurana", "Huimbayoc", "Papaplaya", "San Antonio", "Sauce", "Shapaja", "Nuevo Progreso", "Polvora", "Shunte", "Uchiza", "Juan Guerra", "Picota", "San Hilarion", "Rioja", "Awajun", "Elias Soplin Vargas"],
+
+      Tacna: ["Ciudad Nueva", "Pocollay", "Coronel Gregorio Albarracin Lanchipa", "Calana", "Inclan", "Pachia", "Candarave", "Cairani", "Camilaca", "Curibaya", "Huanuara", "Quilahuani", "Locumba", "Ilabaya", "Ite", "Palca", "Sama", "Tarata", "Héroes Albarracin", "Estique", "Sitajara", "Susapaya", "Tarucachi", "Ticaco", "Estique-Pampa", "Tacna", "Alto de la Alianza", "Ciudad Nueva 2", "Toquepala", "Chucatamani"],
+
+      Tumbes: ["Corrales", "La Cruz", "Pampas de Hospital", "San Jacinto", "San Juan de la Virgen", "Zorritos", "Zarumilla", "Casitas", "Matapalo", "Papayal", "Tumbes", "Aguas Verdes", "Canoas de Punta Sal"],
+
+      Ucayali: ["Neshua", "Alexander von Humboldt", "Yarinacocha", "Manantay", "Campoverde", "Iparia", "Nueva Requena", "Padre Abad", "Irazola", "Curimana", "Masisea", "Raymondi", "Sepahua", "Tahuainia", "Yurua", "Purus", "Calleria"],
+
+    };
+
+    const depSelect = document.getElementById("departamento");
+    const disSelect = document.getElementById("distrito");
+
+    depSelect.addEventListener("change", () => {
+      const distritoOpciones = distritosPorDepartamento[depSelect.value] || [];
+      disSelect.innerHTML = `<option value="">Selecciona un distrito</option>`;
+      distritoOpciones.forEach(d => {
+        disSelect.innerHTML += `<option value="${d}">${d}</option>`;
+      });
+    });
+  </script>
+</body>
+</html>

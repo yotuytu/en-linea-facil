@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos Varios - Compra en una tienda segura</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/cart.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Compra en una tienda segura</div>
+    <nav class="navbar">
+      <a href="index.html">Inicio</a>
+      <a href="joyerias.html">Joyeria</a>
+      <a href="tecnologia.html">Tecnología</a>
+      <a href="varios.html">Variado</a>
+      <a href="cart.html">Carrito</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="productos">
+    <img src="imagenes/Presentacion corporativa lineas azul.png" alt="Banner Varios" class="banner-principal">
+    <div class="producto-grid">
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/6648/1745334070Captura%20de%20pantalla_12-11-2024_215920_www.alibaba.com.jpeg" alt="Mochilas Led" />
+        <h3>Mochilas Led</h3>
+        <p class="descripcion">Mochila con pantalla LED personalizable.</p>
+        <p>S/. 350.00</p>
+        <button onclick="agregarAlCarrito('Mochilas Led', 350)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/6599/1745076501STUNT-CAR.jpg" alt="Stunt Car" />
+        <h3>Stunt Car</h3>
+        <p class="descripcion">Carro acrobático de control remoto.</p>
+        <p>S/. 150.00</p>
+        <button onclick="agregarAlCarrito('Stunt Car', 150)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/6593/1745074451SOPORTE-DE-LAPTOP.jpg" alt="Soporte De Laptop" />
+        <h3>Soporte De Laptop</h3>
+        <p class="descripcion">Soporte ajustable para laptop.</p>
+        <p>S/. 79.00</p>
+        <button onclick="agregarAlCarrito('Soporte De Laptop', 79)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/6240/17408392511.jpg" alt="Mochila Con Lonchera Ploma" />
+        <h3>Mochila Con Lonchera Ploma</h3>
+        <p class="descripcion">Mochila escolar con lonchera incluida.</p>
+        <p>S/. 170.00</p>
+        <button onclick="agregarAlCarrito('Mochila Con Lonchera Ploma', 170)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/6231/174071568011.jpg" alt="Lonchera Termica Con Bandolera Ev" />
+        <h3>Lonchera Termica Con Bandolera Ev</h3>
+        <p class="descripcion">Lonchera térmica con bandolera, colores: azul, negro, rojo, plomo.</p>
+        <p>S/. 80.00</p>
+        <button onclick="agregarAlCarrito('Lonchera Termica Con Bandolera Ev', 80)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3445/1723780010Screenshot%202024-08-15%20at%2022.45.20.png" alt="Pack De 3 Esponja Saca Mugre" />
+        <h3>Pack De 3 Esponja Saca Mugre</h3>
+        <p class="descripcion">Pack de esponjas para limpieza profunda.</p>
+        <p>S/. 50.00</p>
+        <button onclick="agregarAlCarrito('Pack De 3 Esponja Saca Mugre', 50)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/2859/1710820942FOCO3.webp" alt="Tira De Socket Guirnalda Ledexteriores" />
+        <h3>Tira De Socket Guirnalda Ledexteriores</h3>
+        <p class="descripcion">Guirnalda LED para exteriores.</p>
+        <p>S/. 169.00</p>
+        <button onclick="agregarAlCarrito('Tira De Socket Guirnalda Ledexteriores', 169)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/1098/1702520171315863928_4094596937330901_3950308575772211092_n.jpg" alt="Extension Flexible Para Taladro" />
+        <h3>Extension Flexible Para Taladro</h3>
+        <p class="descripcion">Extensión flexible para taladro, ideal para lugares difíciles.</p>
+        <p>S/. 79.00</p>
+        <button onclick="agregarAlCarrito('Extension Flexible Para Taladro', 79)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://api.dropi.pe/uploads/images/products/117/Imagen%20de%20WhatsApp%202023-07-13%20a%20las%2021.30.56.jpg" alt="Pack De Correctores Perfilador De Nari" />
+        <h3>Pack De Correctores Perfilador De Nari</h3>
+        <p class="descripcion">Pack de correctores para perfilar la nariz.</p>
+        <p>S/. 50.00</p>
+        <button onclick="agregarAlCarrito('Pack De Correctores Perfilador De Nari', 50)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://api.dropi.pe/uploads/images/products/211/g6eES9kY0vUR9JP1UKWwLu4YxZXtN6fDaC3mBs3Y.jpg" alt="Pack De 8 Llaveros BtsB" />
+        <h3>Pack De 8 Llaveros BtsB</h3>
+        <p class="descripcion">Pack de 8 llaveros BTS.</p>
+        <p>S/. 69.00</p>
+        <button onclick="agregarAlCarrito('Pack De 8 Llaveros BtsB', 69)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/1409/1704584920123.webp" alt="Reliefhat Gorro Gel Para Dolor De Cabeza" />
+        <h3>Reliefhat Gorro Gel Para Dolor De Cabeza</h3>
+        <p class="descripcion">Gorro de gel para aliviar dolores de cabeza.</p>
+        <p>S/. 50.00</p>
+        <button onclick="agregarAlCarrito('Reliefhat Gorro Gel Para Dolor De Cabeza', 50)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/1444/170491755551BhyLjvKPL._AC_SX679.jpg" alt="Cepillo De Limpieza Ruff De Zapatillas" />
+        <h3>Cepillo De Limpieza Ruff De Zapatillas</h3>
+        <p class="descripcion">Cepillo especial para limpiar zapatillas.</p>
+        <p>S/. 49.00</p>
+        <button onclick="agregarAlCarrito('Cepillo De Limpieza Ruff De Zapatillas', 49)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/1465/1704934736Captura%20de%20pantalla%202024-01-10%20195032.png" alt="Parche Mariposa" />
+        <h3>Parche Mariposa</h3>
+        <p class="descripcion">Parche decorativo con diseño de mariposa.</p>
+        <p>S/. 55.00</p>
+        <button onclick="agregarAlCarrito('Parche Mariposa', 55)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/2998/1711492531Screenshot%202024-03-26%20at%2017.35.25.png" alt="Maquina De Coser Portatil" />
+        <h3>Maquina De Coser Portatil</h3>
+        <p class="descripcion">Máquina de coser portátil y fácil de usar.</p>
+        <p>S/. 75.00</p>
+        <button onclick="agregarAlCarrito('Maquina De Coser Portatil', 75)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3516/1715893414DSDelineador.jpg" alt="Delineador 4 En 1" />
+        <h3>Delineador 4 En 1</h3>
+        <p class="descripcion">Delineador multifunción para maquillaje.</p>
+        <p>S/. 55.00</p>
+        <button onclick="agregarAlCarrito('Delineador 4 En 1', 55)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3586/1716990465sin%20fondo.png" alt="Cupula Rosa Eterna Principe Y Princesa" />
+        <h3>Cupula Rosa Eterna Principe Y Princesa</h3>
+        <p class="descripcion">Cúpula decorativa con rosa eterna.</p>
+        <p>S/. 35.00</p>
+        <button onclick="agregarAlCarrito('Cupula Rosa Eterna Principe Y Princesa', 35)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3947/1722025930WhatsApp%20Image%202024-07-26%20at%203.09.06%20PM.jpeg" alt="Aspiradora Mata Acaros Deluxe" />
+        <h3>Aspiradora Mata Acaros Deluxe</h3>
+        <p class="descripcion">Aspiradora especial para eliminar ácaros.</p>
+        <p>S/. 199.00</p>
+        <button onclick="agregarAlCarrito('Aspiradora Mata Acaros Deluxe', 199)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3955/17220283411.JPG" alt="Rodillo Facial De Hielo De Silicona" />
+        <h3>Rodillo Facial De Hielo De Silicona</h3>
+        <p class="descripcion">Rodillo facial de silicona para masajes.</p>
+        <p>S/. 35.00</p>
+        <button onclick="agregarAlCarrito('Rodillo Facial De Hielo De Silicona', 35)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/3967/17220344671.JPG" alt="Depilador De Cejas Portatil Recargable" />
+        <h3>Depilador De Cejas Portatil Recargable</h3>
+        <p class="descripcion">Depilador portátil recargable para cejas.</p>
+        <p>S/. 55.00</p>
+        <button onclick="agregarAlCarrito('Depilador De Cejas Portatil Recargable', 55)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/4263/1725806484Screenshot%202024-09-08%20at%2009.40.47.png" alt="Masajeador Facial Microcorriente" />
+        <h3>Masajeador Facial Microcorriente</h3>
+        <p class="descripcion">Masajeador facial con microcorriente.</p>
+        <p>S/. 81.00</p>
+        <button onclick="agregarAlCarrito('Masajeador Facial Microcorriente', 81)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/4872/1733863348descarga%20-%202024-12-10T154117.634.jpeg" alt="Ventilador 3 En 1" />
+        <h3>Ventilador 3 En 1</h3>
+        <p class="descripcion">Ventilador multifunción 3 en 1.</p>
+        <p>S/. 99.00</p>
+        <button onclick="agregarAlCarrito('Ventilador 3 En 1', 99)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/4879/1734044286descarga%20-%202024-12-10T130050.596.jpeg" alt="Guante Telarana Hombre Arana" />
+        <h3>Guante Telarana Hombre Arana</h3>
+        <p class="descripcion">Guante con telaraña estilo Hombre Araña.</p>
+        <p>S/. 99.00</p>
+        <button onclick="agregarAlCarrito('Guante Telarana Hombre Arana', 99)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/5374/1737986289img-irrigador-bucal.png" alt="Irrigador Bucal" />
+        <h3>Irrigador Bucal</h3>
+        <p class="descripcion">Irrigador bucal portátil y recargable.</p>
+        <p>S/. 79.00</p>
+        <button onclick="agregarAlCarrito('Irrigador Bucal', 79)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/5916/1738341198litnernasx.jpg" alt="Linterna Martillo 6 En 1 Regalo Lentes" />
+        <h3>Linterna Martillo 6 En 1 Regalo Lentes</h3>
+        <p class="descripcion">Linterna multifunción con regalo de lentes.</p>
+        <p>S/. 80.00</p>
+        <button onclick="agregarAlCarrito('Linterna Martillo 6 En 1 Regalo Lentes', 80)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/6442/1743441214WhatsApp%20Image%202025-03-31%20at%2012.12.56%20PM.jpeg" alt="Pizarra Plegable Para Tiza Adhesiva" />
+        <h3>Pizarra Plegable Para Tiza Adhesiva</h3>
+        <p class="descripcion">Pizarra plegable adhesiva para tiza.</p>
+        <p>S/. 79.00</p>
+        <button onclick="agregarAlCarrito('Pizarra Plegable Para Tiza Adhesiva', 79)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/6466/1743454268WhatsApp%20Image%202025-03-31%20at%203.50.18%20PM.jpeg" alt="Limpiador De Brochas Electrico" />
+        <h3>Limpiador De Brochas Electrico</h3>
+        <p class="descripcion">Limpiador eléctrico para brochas de maquillaje.</p>
+        <p>S/. 69.00</p>
+        <button onclick="agregarAlCarrito('Limpiador De Brochas Electrico', 69)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/peru/products/6512/1744048148WhatsApp%20Image%202025-04-07%20at%2012.48.42%20PM.jpeg" alt="Esterilizador De Cepillos" />
+        <h3>Esterilizador De Cepillos</h3>
+        <p class="descripcion">Esterilizador portátil para cepillos.</p>
+        <p>S/. 65.00</p>
+        <button onclick="agregarAlCarrito('Esterilizador De Cepillos', 65)">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Compra en una tienda segura y en Línea. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

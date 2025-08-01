@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito - Compra en una tienda segura</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/cart.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Compra en una tienda segura</div>
+    <nav class="navbar">
+      <a href="index.html">Inicio</a>
+      <a href="joyerias.html">Joyeria</a>
+      <a href="tecnologia.html">Tecnología</a>
+      <a href="varios.html">Variado</a>
+      <a href="cart.html">Carrito</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="cart-container">
+    <h2>Tu carrito de compras</h2>
+    <div id="carrito"></div>
+    <p id="total">Total: S/. 0.00</p>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    <a href="checkout.html" class="btn-finalizar">Finalizar compra</a>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Compra en una tienda segura y en Linea. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Notificación -->
+  <style>
+    .notificacion-carrito {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2e8b57;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      font-weight: bold;
+    }
+
+    .notificacion-carrito.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .btn-finalizar {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #2e8b57;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</body>
+</html>

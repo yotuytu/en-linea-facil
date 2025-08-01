@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head class="header">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compra en una tienda segura</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/cart.js" defer></script>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="logo">Compra en una tienda segura</div>
+    <nav class="navbar">
+      <a href="index.html">Inicio</a>
+      <a href="joyerias.html">Joyeria</a>
+     <a href="tecnologia.html">Tecnología</a>
+      <a href="varios.html">Variado</a>
+     <a href="cart.html">Carrito</a>
+     <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Carrusel / Banner -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Los mejores productos</h1>
+      <p>Cosas interesantes para tu Novia(o)</p>
+      <a href="#productos" class="btn">Ver productos</a>
+    </div>
+  </section>
+
+  <!-- Productos destacados -->
+  <section class="productos" id="productos">
+    <h2>Productos destacados</h2>
+    <div class="producto-grid">
+      <div class="producto">
+        <img src="assets/images/anillo1.jpg" alt="Anillo elegante" />
+        <h3>Anillo Elegante</h3>
+        <p class="descripcion">Este anillo es perfecto para cualquier ocasión, con un diseño elegante y moderno.</p>
+        <p>S/. 48.00</p>
+        <button onclick="agregarAlCarrito('Anillo Elegante', 48)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="assets/images/pendiente1.jpg" alt="Pendientes de perla" />
+        <h3>Pendientes de Perla</h3>
+        <p class="descripcion">Pendientes de perla, perfectos para cualquier ocasión.</p>
+        <p>S/. 35.00</p>
+        <button onclick="agregarAlCarrito('Pendientes de Perla', 35)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="assets/images/collar1.jpg" alt="Collar de diamantes" />
+        <h3>Collar de Diamantes</h3>
+        <p class="descripcion">Collar de diamantes, ideal para ocasiones especiales.</p>
+        <p>S/. 72.00</p>
+        <button onclick="agregarAlCarrito('Collar de Diamantes', 72)">Agregar al carrito</button>
+      </div>
+    </div>
+    </section>
+    
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2025 Compra seguras en línea. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
